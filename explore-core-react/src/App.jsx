@@ -23,11 +23,34 @@ function App() {
         <Developer name= "Maruf" tech = "React"></Developer>
         <Developer name= "Hasan" tech = "JS"></Developer>
         <Developer name= "Mozumder" tech = "JAVA"></Developer>
+        <Player name = "Maruf Hasan" run="10000"></Player>
+        <Player name = "Hasan" run="5000"></Player>
+        <Salami event = "Roja Eid" amount="5000"></Salami>
+        <Salami event = "Kurbani Eid"></Salami>
         
     
     </>
   )
 }
+function Salami({event, amount = 0}){
+  return(
+    <div className="student">
+      <p >Salami For: {event}</p>
+      <p>Amount: {amount}</p>
+
+    </div>
+
+  )
+}
+function Player({name, run}){
+  return(
+    <div className="student">
+      <h3>Name: {name}</h3>
+      <p>Runs: {run}</p>
+    </div>
+  )
+}
+
 
 function Developer(pops){
   
