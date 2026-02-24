@@ -15,6 +15,9 @@ function App() {
         <Sports></Sports>
         <Person></Person>
         <Sports></Sports>
+
+        <Student></Student>
+        <Student></Student>
     
     </>
   )
@@ -23,10 +26,18 @@ function App() {
 function Person(){
   const age= 26;
   const name = "Maruf";
+
+  const personStyle = {
+    color: 'red',
+    fontSize : 18 ,
+    textAlign: 'center'
+  }
+
   return(
-    <p>I am a Person! Name: {name} & Age : {age}</p>
+    <p style={personStyle}>I am a Person! Name: {name} & Age : {age}</p>
   )
 }
+
 function Sports(){
 
   return(
@@ -34,10 +45,18 @@ function Sports(){
       <p>Playing and Loosing! in:</p>
       <h3>PUBG</h3>
     </div>
+  )
+}
+
+function Student(){
+  return(
+  <div className='student'>
+    <p>Name: </p>
+    <p>Dept: </p>
+  </div>
 
 
   )
-
 }
 
 export default App
