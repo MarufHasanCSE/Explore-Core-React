@@ -19,21 +19,27 @@ function App() {
 
         <Student></Student>
         <Student></Student>
+
+        <Developer name= "Maruf" tech = "React"></Developer>
+        <Developer name= "Hasan" tech = "JS"></Developer>
+        <Developer name= "Mozumder" tech = "JAVA"></Developer>
+        
     
     </>
   )
 }
 
-
-function Developer(){
+function Developer(pops){
+  
   return(
     <div style={{
       border: '3px solid green',
-      borderRadius: '15px'
+      borderRadius: '15px',
+      margin: 5
       
     }}>
-      <h3>Developer: </h3>
-      <p>Technology: </p>
+      <h3>Developer: {pops.name}</h3>
+      <p>Technology: {pops.tech} </p>
     </div>
   )
 }
