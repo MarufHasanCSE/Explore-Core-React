@@ -13,6 +13,7 @@ function App() {
         <Sports></Sports>
         <Person></Person>
         <Sports></Sports>
+        <Developer> </Developer>
         <Person></Person>
         <Sports></Sports>
 
@@ -20,6 +21,20 @@ function App() {
         <Student></Student>
     
     </>
+  )
+}
+
+
+function Developer(){
+  return(
+    <div style={{
+      border: '3px solid green',
+      borderRadius: '15px'
+      
+    }}>
+      <h3>Developer: </h3>
+      <p>Technology: </p>
+    </div>
   )
 }
 
