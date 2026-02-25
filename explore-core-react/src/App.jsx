@@ -11,7 +11,9 @@ function App() {
   return (
     <>
         <h1>Vite + React</h1>
-        <ToDo task = "Learn React"></ToDo>
+        <ToDo task = "Learn React" isDone = {true}></ToDo>
+        <ToDo task = "Revise JS" isDone = {false}></ToDo>
+        <ToDo task = "Eat Dinner" isDone = {false}></ToDo>
         {/* <Person></Person>
         <Sports></Sports>
         <Person></Person>

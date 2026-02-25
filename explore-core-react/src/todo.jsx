@@ -1,9 +1,13 @@
-export default function ToDo({task}){
+// export default function ToDo({task}){
 
-    return(
-        <li>Task: {task}</li>
-    )
+//     return(
+//         <li>Task: {task}</li>
+//     )
 
+// }
 
-
+export default function ToDo({ task, isDone }) {
+  if (isDone) {
+    return <li>Done: {task}</li>;
+  }
 }
