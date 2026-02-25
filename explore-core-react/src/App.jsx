@@ -7,33 +7,27 @@ import ToDo from "./todo";
 import Actor from "./Actor";
 import Singer from "./Singer";
 
-
 function App() {
   const [count, setCount] = useState(0);
   const time = 50;
 
-  const actors = ['Bappa Raj', 'Omor Sunny', 'Salman Shah', 'Jasim', 'Anwar'];
+  const actors = ["Bappa Raj", "Omor Sunny", "Salman Shah", "Jasim", "Anwar"];
 
   const singers = [
-    {id: 1, name: 'Dr. Mahfuz', age: 68},
-    {id: 2, name: 'Tahsan', age: 45},
-    {id: 3, name: 'shuvro Deb', age: 57}
-  ]
+    { id: 1, name: "Dr. Mahfuz", age: 68 },
+    { id: 2, name: "Tahsan", age: 45 },
+    { id: 3, name: "shuvro Deb", age: 57 },
+  ];
   return (
     <>
       <h1>Vite + React</h1>
 
-      {
-        singers.map(singer => <Singer key = {singer.id} singer = {singer}></Singer>)
-
-
-      }
-      {
-        actors.map(actor => <Actor actor = {actor}></Actor>)
-      }
-
-
-
+      {singers.map((singer) => (
+        <Singer key={singer.id} singer={singer}></Singer>
+      ))}
+      {actors.map((actor) => (
+        <Actor actor={actor}></Actor>
+      ))}
 
       {/* <ToDo 
         task = "Learn React" 
