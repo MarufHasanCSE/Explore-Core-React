@@ -1,26 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
-import ToDo from './todo'
+import ToDo from "./todo";
+import Actor from "./Actor";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   const time = 50;
+
+  const actors = ['Bappa Raj', 'Omor Sunny', 'Salman Shah', 'Jasim', 'Anwar'];
 
   return (
     <>
-        <h1>Vite + React</h1>
-        <ToDo 
+      <h1>Vite + React</h1>
+      {
+        actors.map(actor => <Actor actor = {actor}></Actor>)
+      }
+
+
+
+
+      {/* <ToDo 
         task = "Learn React" 
         isDone = {true} 
         time = {time}>
         </ToDo>
         <ToDo task = "Revise JS" isDone = {false}></ToDo>
         <ToDo task = "Eat Dinner" isDone = {false} time = 'Need 10'></ToDo>
-        <ToDo task = "Eat Sehri" isDone = {true} time = ''></ToDo>
-        {/* <Person></Person>
+        <ToDo task = "Eat Sehri" isDone = {true} time = ''></ToDo> */}
+      {/* <Person></Person>
         <Sports></Sports>
         <Person></Person>
         <Sports></Sports>
@@ -38,80 +49,74 @@ function App() {
         <Player name = "Hasan" run="5000"></Player>
         <Salami event = "Roja Eid" amount="5000"></Salami>
         <Salami event = "Kurbani Eid"></Salami> */}
-        
-    
     </>
-  )
+  );
 }
-function Salami({event, amount = 0}){
-  return(
+function Salami({ event, amount = 0 }) {
+  return (
     <div className="student">
-      <p >Salami For: {event}</p>
+      <p>Salami For: {event}</p>
       <p>Amount: {amount}</p>
-
     </div>
-
-  )
+  );
 }
-function Player({name, run}){
-  return(
+function Player({ name, run }) {
+  return (
     <div className="student">
       <h3>Name: {name}</h3>
       <p>Runs: {run}</p>
     </div>
-  )
+  );
 }
 
-
-function Developer(pops){
-  
-  return(
-    <div style={{
-      border: '3px solid green',
-      borderRadius: '15px',
-      margin: 5
-      
-    }}>
+function Developer(pops) {
+  return (
+    <div
+      style={{
+        border: "3px solid green",
+        borderRadius: "15px",
+        margin: 5,
+      }}
+    >
       <h3>Developer: {pops.name}</h3>
       <p>Technology: {pops.tech} </p>
     </div>
-  )
+  );
 }
 
-function Person(){
-  const age= 26;
+function Person() {
+  const age = 26;
   const name = "Maruf";
 
   const personStyle = {
-    color: 'red',
-    fontSize : 18 ,
-    textAlign: 'center'
-  }
+    color: "red",
+    fontSize: 18,
+    textAlign: "center",
+  };
 
-  return(
-    <p style={personStyle}>I am a Person! Name: {name} & Age : {age}</p>
-  )
+  return (
+    <p style={personStyle}>
+      I am a Person! Name: {name} & Age : {age}
+    </p>
+  );
 }
 
-function Sports(){
-
-  return(
+function Sports() {
+  return (
     <div>
       <p>Playing and Loosing! in:</p>
       <h3>PUBG</h3>
     </div>
-  )
+  );
 }
 
-function Student(){
-  return(
-  <div className='student'>
-    <p>Name: </p>
-    <p>Dept: </p>
-  </div>
-
-
-  )
+function Student() {
+  return (
+    <div className="student">
+      <p>Name: </p>
+      <p>Dept: </p>
+    </div>
+  );
 }
 
-export default App
+export default App;
