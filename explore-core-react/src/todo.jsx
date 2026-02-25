@@ -16,8 +16,33 @@
 
 
 
+// export default function ToDo({ task, isDone , time = 0}) {
+  
+//     return  isDone ? <li>Done: {task} Duration: {time} min</li> :    <li>Do Now: {task} Duration: {time} min </li>;
+  
+// }
+
+// export default function ToDo({ task, isDone , time = 0}) {
+  
+//     return  isDone && <li>Done: {task} Duration: {time} min</li> ;
+  
+// }
+
+// export default function ToDo({ task, isDone , time = 0}) {
+  
+//     return  isDone || <li> Not Done: {task} Duration: {time} min</li> ;
+  
+// }
+
+
 export default function ToDo({ task, isDone , time = 0}) {
+  const displayTime = time ? time : 100;
+  let lsitItem ;
   
-    return  isDone ? <li>Done: {task} Duration: {time} min</li> :    <li>Do Now: {task} Duration: {time} min </li>;
-  
+    if (isDone) {
+    lsitItem = <li>Done: {task} Duration: {time} min</li>;
+  } else {
+    lsitItem = <li>Do Now: {task} Duration: {time} min </li>;
+  }
+  return lsitItem;
 }
