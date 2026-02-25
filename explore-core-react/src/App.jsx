@@ -7,13 +7,18 @@ import ToDo from './todo'
 
 function App() {
   const [count, setCount] = useState(0)
+  const time = 50;
 
   return (
     <>
         <h1>Vite + React</h1>
-        <ToDo task = "Learn React" isDone = {true}></ToDo>
+        <ToDo 
+        task = "Learn React" 
+        isDone = {true} 
+        time = {time}>
+        </ToDo>
         <ToDo task = "Revise JS" isDone = {false}></ToDo>
-        <ToDo task = "Eat Dinner" isDone = {false}></ToDo>
+        <ToDo task = "Eat Dinner" isDone = {false} time = '10'></ToDo>
         {/* <Person></Person>
         <Sports></Sports>
         <Person></Person>
