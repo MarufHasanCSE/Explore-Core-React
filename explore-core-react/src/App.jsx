@@ -3,13 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import ToDo from './todo'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
         <h1>Vite + React</h1>
-        <Person></Person>
+        <ToDo task = "Learn React"></ToDo>
+        {/* <Person></Person>
         <Sports></Sports>
         <Person></Person>
         <Sports></Sports>
@@ -26,7 +29,7 @@ function App() {
         <Player name = "Maruf Hasan" run="10000"></Player>
         <Player name = "Hasan" run="5000"></Player>
         <Salami event = "Roja Eid" amount="5000"></Salami>
-        <Salami event = "Kurbani Eid"></Salami>
+        <Salami event = "Kurbani Eid"></Salami> */}
         
     
     </>
