@@ -40,7 +40,7 @@ export default function ToDo({ task, isDone , time = 0}) {
   let lsitItem ;
   
     if (isDone) {
-    lsitItem = <li>Done: {task} Duration: {time} min</li>;
+    lsitItem = <li>Done: {task} Duration: {time ? `I am Done in ${time} min` : 'Not done yet'} </li>;
   } else {
     lsitItem = <li>Do Now: {task} Duration: {time} min </li>;
   }
